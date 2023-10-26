@@ -3,7 +3,7 @@
     color: #ffffff;
     align-items: left;
     display: grid;
-    font-size: 12px;
+   
 
 
 }
@@ -31,7 +31,7 @@
 .button {
 display: inline-block;
  border-radius: 37%; 
-font-size: 45px;
+font-size: 35px;
  padding: 10px 20px;
  background-color: #707593;
  color: #ffffff;
@@ -44,4 +44,12 @@ font-size: 45px;
 
 .button:hover {
     background-color: #aef800;
+}
+
+.textos{
+    text-align: center;
+  font-family:monospace;
+  font-size: 16px;
+  color: #ffffff;
+
 }

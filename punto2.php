@@ -99,15 +99,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang = 'es'>
 <head>
 <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
-    <title>Calculadora de Área</title>
 </head>
 <body>
     <h1>Calculadora de Área</h1>
-    <form method="post" action="">
+    <form class="textos" method="post" action="">
         <label for="shape">Selecciona una figura:</label>
         <select name="shape" id="shape">
             <option value="circle">Círculo</option>
@@ -134,13 +133,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="number" name="height" id="height" value="1">
          <br><br>
         <input class="button" type="submit" value="Calcular Area">
+        <a href="index.html" class="button" >VOLVER</a>
     </form>
 
         </select>
         <br><br>
         <div id="inputFields">
-            <!-- Campos para ingresar datos específicos de cada figura se generan dinámicamente mediante JavaScript -->
-        </div>
         <br>
      
 
