@@ -1,0 +1,40 @@
+*{
+    background-color: #243031;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.titulo{
+   text-align: center;
+  font-family:monospace;
+  font-size: 60px;
+  color: #ffffff;
+  
+
+}
+
+.button {
+display: inline-block;
+ border-radius: 37%; 
+font-size: 45px;
+ padding: 10px 20px;
+ background-color: #707593;
+ color: #ffffff;
+ border: none;
+ cursor: pointer;
+ transition: all 0.3s ease 0s;
+ font-family:monospace
+}
+
+.button:hover {
+    background-color: #aef800;
+}
