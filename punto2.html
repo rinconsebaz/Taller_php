@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area Calculator</title>
+</head>
+<body>
+    <form action="calculateArea.php" method="post">
+        <label for="shape">Choose a shape:</label>
+        <select name="shape" id="shape">
+            <option value="circle">Circle</option>
+            <option value="square">Square</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="triangle">Triangle</option>
+        </select>
+        <br><br>
+        <label for="radius">Radius:</label>
+        <input type="number" name="radius" id="radius" value="1">
+        <br><br>
+        <label for="side">Side:</label>
+        <input type="number" name="side" id="side" value="1">
+        <br><br>
+        <label for="length">Length:</label>
+        <input type="number" name="length" id="length" value="1">
+        <br><br>
+        <label for="width">Width:</label>
+        <input type="number" name="width" id="width" value="1">
+        <br><br>
+        <label for="base">Base:</label>
+        <input type="number" name="base" id="base" value="1">
+        <br><br>
+        <label for="height">Height:</label>
+        <input type="number" name="height" id="height" value="1">
+        <br><br>
+        <input type="submit" value="Calculate Area">
+    </form>
+</body>
+</html>

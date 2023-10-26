@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-
+<html lang ='es'>
+<head>
+<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Punto 1</title>
+</head>
+<body >
 
 <?php
-function solve($nums) {
-    sort($nums);
 
-    $pares = array_filter($nums, function($num) {
-        return $num % 2 == 0;
-    });
+$lista_numeros = [8, 3, 12, 5, 9, 20, 6, 17, 4];
 
-    rsort($pares);
 
-    $impares = array_filter($nums, function($num) {
-        return $num % 2 != 0;
-    });
+sort($lista_numeros);
 
-    sort($impares);
 
-    return array($nums, $pares, $impares);
-}
+$lista_pares = array_filter($lista_numeros, function($numero) {
+    return $numero % 2 == 0;
+});
+rsort($lista_pares);
 
-$nums = array(4, 2, 9, 6, 5, 3, 8, 1, 7);
-list($sorted_nums, $sorted_pares, $sorted_impares) = solve($nums);
 
-echo "Números ordenados de menor a mayor: ";
-print_r($sorted_nums);
+$lista_impares = array_filter($lista_numeros, function($numero) {
+    return $numero % 2 != 0;
+});
+sort($lista_impares);
 
-echo "Números pares ordenados de mayor a menor: ";
-print_r($sorted_pares);
 
-echo "Números impares ordenados de menor a mayor: ";
-print_r($sorted_impares);
+echo "Lista ordenada de menor a mayor: " . implode(", ", $lista_numeros) . "<br>";
+echo "Lista de números pares ordenados de mayor a menor: " . implode(", ", $lista_pares) . "<br>";
+echo "Lista de números impares ordenados de menor a mayor: " . implode(", ", $lista_impares);
 ?>
-
+<a href="index.html" class="button" >"VOLVER"</a>
+</body>
 </html>
