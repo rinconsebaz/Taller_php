@@ -1,45 +1,43 @@
 <?php
-include __DIR__ . '/models/estudiante.php';
+include __DIR__ . '/models/docente.php'; // Cambiado a "docente.php"
 include __DIR__ . '/controllers/entityController.php';
 include __DIR__ . '/controllers/database/databaseController.php';
-include __DIR__ . '/controllers/estudiantes/estudianteController.php';
+include __DIR__ . '/controllers/docentes/docenteController.php'; // Cambiado a "docentes/docenteController.php"
 
-use App\controllers\estudiantes\EstudianteController;
+use App\controllers\docentes\docenteController; // Cambiado a "DocenteController"
 
-$estudianteController = new EstudianteController();
-$lista = $estudianteController->allData();
+$docenteController = new DocenteController();
+$lista = $docenteController->allData();
 ?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <title>Estudiantes</title>
+    <title>Docentes</title>
 </head>
 
 <body>
-    <h1>Lista de estudiante</h1>
-    <a href = "views/formularioEstudiante.php?operacion=add">Registrar</a>
-    <a href = "views/formularioEstudiante.php?operacion=add">Registrar</a>
+    <h1>Lista de Docentes</h1>
+    <a href="views/formularioDocente.php?operacion=add">Registrar Docente</a>
     <table>
         <thead>
             <tr>
                 <th>Código</th>
                 <th>Nombre</th>
-                <th>Email</th>
-                <th><
-            </tr>
+                <th>Ocupacion</th>
+                </tr>
         </thead>
         <tbody>
             <?php
-            foreach ($lista as $estudiante) {
+            foreach ($lista as $docente) {
                 echo '<tr>';
-                echo '  <td>' . $estudiante->get('codigo') . '</td>';
-                echo '  <td>' . $estudiante->get('nombre') . '</td>';
-                echo '  <td>' . $estudiante->get('email') . '</td>';
+                echo '  <td>' . $docente->get('cod') . '</td>'; // Cambiado a "cod"
+                echo '  <td>' . $docente->get('nombre') . '</td>';
+                echo '  <td>' . $docente->get('idOcupacion') . '</td>'; // Cambiado a "idOcupacion"
                 echo '  <td>';
-                echo '      <a href="views/formularioEstudiante.php?operacion=update&codigo=' . $estudiante->get('codigo') . '">Modificar</a>';
-                echo '      <a href="views/confirmarEliminacion.php?codigo=' . $estudiante->get('codigo') . '">Eliminar</a>';
+                echo '      <a href="views/formularioDocente.php?operacion=update&codigo=' . $docente->get('cod') . '">Modificar</a>'; // Cambiado a "cod"
+                echo '      <a href="views/confirmarEliminacion.php?codigo=' . $docente->get('cod') . '">Eliminar</a>'; // Cambiado a "cod"
                 echo '</tr>';
             }
             ?>

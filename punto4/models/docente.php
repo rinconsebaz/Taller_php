@@ -2,10 +2,10 @@
 
 namespace App\models;
 
-class Estudiante{
+class Docente{
     private $codigo;
     private $nombre;
-    private $email; 
+    private $ocupacion; 
 
     function get($prop){
         return $this->$prop;
