@@ -4,9 +4,8 @@ include __DIR__ . '/controllers/entityController.php';
 include __DIR__ . '/controllers/database/databaseController.php';
 include __DIR__ . '/controllers/docentes/docenteController.php'; // Cambiado a "docentes/docenteController.php"
 
-use App\controllers\docentes\docenteController; // Cambiado a "DocenteController"
-
-$docenteController = new DocenteController();
+use App\controllers\docentes\DocenteController;
+$docenteController = new docenteController();
 $lista = $docenteController->allData();
 ?>
 <!DOCTYPE html>
@@ -34,7 +33,7 @@ $lista = $docenteController->allData();
                 echo '<tr>';
                 echo '  <td>' . $docente->get('cod') . '</td>'; // Cambiado a "cod"
                 echo '  <td>' . $docente->get('nombre') . '</td>';
-                echo '  <td>' . $docente->get('idOcupacion') . '</td>'; // Cambiado a "idOcupacion"
+                echo '  <td>' . $docente->get('ocup') . '</td>'; // Cambiado a "idOcupacion"
                 echo '  <td>';
                 echo '      <a href="views/formularioDocente.php?operacion=update&codigo=' . $docente->get('cod') . '">Modificar</a>'; // Cambiado a "cod"
                 echo '      <a href="views/confirmarEliminacion.php?codigo=' . $docente->get('cod') . '">Eliminar</a>'; // Cambiado a "cod"

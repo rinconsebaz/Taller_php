@@ -5,7 +5,9 @@ namespace App\models;
 class Docente{
     private $codigo;
     private $nombre;
-    private $ocupacion; 
+    private $idOcupacion;
+    private $cod; 
+    private $ocup;
 
     function get($prop){
         return $this->$prop;

@@ -4,11 +4,11 @@ namespace App\controllers\docentes;
 use App\controllers\EntityController;
 use App\models\Docente; // Cambiado a Docente en lugar de Estudiante
 
-class EstudianteController extends EntityController {
+class DocenteController extends EntityController {
 
     function allData(){
         // Consulta SQL para seleccionar todos los registros de docentes
-        $sql = "SELECT * FROM docentes";
+        $sql = "SELECT docentes.*,ocupaciones.nombre as ocup from docentes INNER join ocupaciones on docentes.idOscupacion = ocupaciones.id";
         // Ejecutar la consulta SQL usando el método execSql del controlador base
         $resultSQL = $this->execSql($sql);
         $lista = [];
@@ -17,13 +17,14 @@ class EstudianteController extends EntityController {
             while($item = $resultSQL->fetch_assoc()){
                 // Crear un objeto Docente y asignarle los datos obtenidos de la base de datos
                 $docente = new Docente();
-                $docente->set('codigo', $item['cod']);
+                $docente->set('cod', $item['cod']);
                 $docente->set('nombre', $item['nombre']);
-                $docente->set('ocupacion', $item['idOcupacion']);
+                $docente->set('idOcupacion', $item['idOcupacion']);
                 // Agregar el objeto Docente a la lista
                 array_push($lista, $docente);
             }
         }
+        ;
         // Devolver la lista de docentes
         return $lista;
     }
