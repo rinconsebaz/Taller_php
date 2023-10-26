@@ -4,9 +4,8 @@ include __DIR__ . '/controllers/entityController.php';
 include __DIR__ . '/controllers/database/databaseController.php';
 include __DIR__ . '/controllers/docentes/docenteController.php'; // Cambiado a "docentes/docenteController.php"
 
-use App\controllers\docentes\docenteController; // Cambiado a "DocenteController"
-
-$docenteController = new DocenteController();
+use App\controllers\docentes\DocenteController;
+$docenteController = new docenteController();
 $lista = $docenteController->allData();
 ?>
 <!DOCTYPE html>

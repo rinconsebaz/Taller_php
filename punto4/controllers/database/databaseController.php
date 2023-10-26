@@ -7,7 +7,7 @@ class DatabaseController{
     private $DB_HOST = 'localhost';
     private $DB_USER = 'root';
     private $DB_PWD = '';
-    private $DB_NAME = 'estudiantes_cb';
+    private $DB_NAME = 'asignaturas2_db';
     private $conx;
 
     function __construct() {
